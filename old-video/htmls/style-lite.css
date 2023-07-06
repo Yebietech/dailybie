@@ -1,0 +1,344 @@
+/*字体*/
+@font-face {
+    font-family: Alibaba-black;
+    src: url('fonts/AlibabaPuHuiTi-3-115-Black/AlibabaPuHuiTi-3-115-Black.ttf');
+}
+
+@font-face {
+    font-family: Alibaba-heavy;
+    src: url('fonts/AlibabaPuHuiTi-3-105-Heavy/AlibabaPuHuiTi-3-105-Heavy.ttf');
+}
+
+@font-face {
+    font-family: Alibaba-extrabold;
+    src: url('fonts/AlibabaPuHuiTi-3-95-ExtraBold/AlibabaPuHuiTi-3-95-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: Alibaba-bold;
+    src: url('fonts/AlibabaPuHuiTi-3-85-Bold/AlibabaPuHuiTi-3-85-Bold.ttf');
+}
+
+@font-face {
+    font-family: Alibaba-semiblod;
+    src: url('fonts/AlibabaPuHuiTi-3-75-SemiBold/AlibabaPuHuiTi-3-75-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: Alibaba-medium;
+    src: url('fonts/AlibabaPuHuiTi-3-65-Medium/AlibabaPuHuiTi-3-65-Medium.ttf');
+}
+
+@font-face {
+    font-family: Alibaba-regular-l3;
+    src: url('fonts/AlibabaPuHuiTi-3-55-RegularL3/AlibabaPuHuiTi-3-55-RegularL3.ttf');
+}
+
+@font-face {
+    font-family: Alibaba-regular;
+    src: url('fonts/AlibabaPuHuiTi-3-55-Regular/AlibabaPuHuiTi-3-55-Regular.ttf');
+}
+
+@font-face {
+    font-family: Alibaba-light;
+    src: url('fonts/AlibabaPuHuiTi-3-45-Light/AlibabaPuHuiTi-3-45-Light.ttf');
+}
+
+@font-face {
+    font-family: Alibaba-thin;
+    src: url('fonts/AlibabaPuHuiTi-3-35-Thin/AlibabaPuHuiTi-3-35-Thin.ttf');
+}
+
+/*全局边距*/
+body {
+    margin: 8px 16px 25px 25px;
+    background-color: #f5f5f7;
+}
+
+/*全局变量*/
+:root {
+    --100: 100%
+}
+
+/*导航*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(230, 235, 240, 0.7);
+    border: 2px solid rgba(245, 245, 247, 0.7);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 15px;
+    border-radius: 14px;
+    backdrop-filter: blur(18px);
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Alibaba-semiblod;
+}
+
+li a:hover {
+    background-color: #f0f0f0;
+}
+
+/*大标题*/
+h1.big_title {
+    text-align: left;
+    font-family: Alibaba-heavy;
+    font-size: 48px;
+}
+
+h3.big_title {
+    text-align: left;
+    font-family: Alibaba-semiblod;
+    font-size: 24px;
+}
+
+button.big_title {
+    font-family: Alibaba-bold;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: Orange;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 5px;
+    width: 118px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.sectitle {
+    display: flex;
+}
+
+button.big_title span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+button.big_title span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+button.big_title:hover span {
+    padding-right: 25px;
+}
+
+button.big_title:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+#button-link {
+    text-decoration: none;
+    color: white;
+}
+
+/*列*/
+.column {
+    float: left;
+    width: 100%;
+}
+
+.card {
+    background-color: white;
+    border-radius: 14px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.02),
+        0 6px 20px 0 rgba(0, 0, 0, 0.02);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 800px) {
+
+    .leftcolumn,
+    .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .leftcolumn,
+    .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+h2 {
+    font-family: Alibaba-bold;
+    font-size: 32px;
+}
+
+h3 {
+    font-family: Alibaba-bold;
+    font-size: 24px;
+}
+
+p {
+    font-family: Alibaba-regular;
+    font-size: 16px;
+}
+
+mark {
+    background-color: transparent;
+    color: inherit;
+    background-image: linear-gradient(Orange, Orange);
+    background-repeat: no-repeat;
+    background-size: 100% 38%;
+    background-position: 0 100%;
+}
+
+p.information {
+    font-family: Alibaba-regular-l3;
+    text-align: center;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 600px) {
+
+    .column.side,
+    .column.middle {
+        width: 100%;
+    }
+}
+
+.bold {
+    font-family: Alibaba-heavy;
+}
+
+.reg {
+    font-family: Alibaba-regular;
+}
+
+
+.sbold {
+    font-family: Alibaba-medium;
+}
+
+.sreg {
+    font-family: Alibaba-light;
+}
+
+
+
+input[type=text] {
+    border-radius: 14px;
+    width: 91%;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    background-color: #f1f1f1;
+    font-family: Alibaba-regular;
+}
+
+input[type=submit] {
+    border-radius: 14px;
+    width: 100%;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    background-color: #f1f1f1;
+    font-family: Alibaba-regular;
+}
+
+input[type=file] {
+    border-radius: 14px;
+    width: 91%;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    background-color: #f1f1f1;
+    font-family: Alibaba-regular;
+}
+
+select {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 14px;
+    background-color: #f1f1f1;
+    font-family: Alibaba-regular;
+}
+
+
+
+.nowtime {
+    font-family: Alibaba-bold;
+    font-size: 32px;
+}
+
+.tomtime {
+    font-family: Alibaba-bold;
+    font-size: 32px;
+}
+
+.list-time {
+    font-family: Alibaba-semiblod;
+    font-size: 25px;
+}
+
+.list-name {
+    font-family: Alibaba-regular;
+    font-size: 16px;
+}
+
+.list-mins {
+    font-family: Alibaba-semiblod;
+    font-size: 25px;
+}
+
+.download-button {
+    font-family: Alibaba-semiblod;
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #f5f5f7;
+    border-radius: 14px;
+}
+
+img {
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.02),
+        0 6px 20px 0 rgba(0, 0, 0, 0.02);
+}
+
+video {
+    border-radius: 14px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.02),
+        0 6px 20px 0 rgba(0, 0, 0, 0.02);
+}
