@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="bear-_1_.png" sizes="625x625">
+    <script type="text/javascript" src="moment-with-locales.js"></script>
+    <title>每日一憋 - 野憋投票(音乐)</title>
+</head>
+
+<body>
+    <ul>
+        <!---导航-->
+        <div class="nav">
+            <li><a href="apps.html">返回</a>
+            </li>
+        </div>
+    </ul>
+    <h1 style="padding-top: 60px;" class="sectitle">
+        <div class="bold">野憋投票(音乐)</div>
+        <div class="reg">/Music voting</div>
+    </h1>
+
+    <!---日期显示-->
+    <div class="row">
+        <div class="column">
+            <h3>注意时间</h3>
+            <div class="card">
+                <p style="display: inline;">现在是
+                    <span class="nowtime"><span id="month">-</span>月<span id="day">-</span>日</span>(北京时间)
+                </p>
+                <p>你正在为
+                    <span class="tomtime"><span id="tmonth">-</span>月<span id="tday">-</span>日</span>的每日一憋投票
+                </p>
+            </div>
+            <script>
+                var month = new Date();
+                document.getElementById("month").innerHTML = month.getMonth() + 1;
+
+                var day = new Date();
+                document.getElementById("day").innerHTML = day.getDate();
+
+
+
+                const date = new Date('2023/06/30');
+
+                // 第二天
+                var today = new Date();
+
+                today.setDate(today.getDate() + 1);
+
+                var tmonth = today.getMonth() + 1;
+                var tday = today.getDate();
+                document.getElementById("tmonth").innerHTML = today.getMonth() + 1;
+                document.getElementById("tday").innerHTML = today.getDate();
+            </script>
+            <!---投票-->
+
+            <h3>基本信息</h3>
+            <div class="card">
+                <form action="action_page.php" target="_blank" method="post">
+                    <p>*音乐链接</p>
+                    <input type="text" name="link" autocomplete="off" type="url">
+                    <p>音乐名称</p>
+                    <input type="text" name="name" autocomplete="off" type="text">
+                    <p>音乐歌手</p>
+                    <input type="text" name="singer" autocomplete="off" type="text">
+                    <br>
+            </div>
+            <h3>展示方式</h3>
+            <div class="card">
+                <select id="show" name="show">
+                    <option value="Scrolling subtitles">滚动字幕</option>
+                    <option value="Auto MV">自动MV</option>
+                    <option value="Custom MV">自定义MV</option>
+                    <option value="Custom VIDEO">上传视频</option>
+                </select>
+            </div>
+            <h3>资料上传</h3>
+            <div class="card">
+                <input type="file" name="files">
+            </div>
+            <div class="card">
+                <input type="submit" value="提交">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

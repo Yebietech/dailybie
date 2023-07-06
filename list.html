@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="bear-_1_.png" sizes="625x625">
+    <title>每日一憋 - 节目单</title>
+</head>
+
+<body>
+    <!---导航-->
+    <ul>
+        <div class="nav">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="apps.html">应用</a></li>
+            <li><a href="list.html">节目单</a></li>
+            <li><a href="old-video.html">往期观看</a></li>
+        </div>
+    </ul>
+
+    <h1 style="padding-top: 60px;" class="sectitle">
+        <div class="bold">节目单</div>
+        <div class="reg">/List</div>
+    </h1>
+
+    <div class="card">
+        <h2><span id="tmonth">-</span>月<span id="tday">-</span>日节目单</h2>
+        <script>
+            // 第二天
+            var today = new Date();
+
+            today.setDate(today.getDate() + 1);
+
+            var tmonth = today.getMonth() + 1;
+            var tday = today.getDate();
+            document.getElementById("tmonth").innerHTML = today.getMonth() + 1;
+            document.getElementById("tday").innerHTML = today.getDate();
+        </script>
+    </div>
+    <div class="card">
+        <div class="list">
+            <table width="100%">
+                <tr>
+                    <td width="80" class="list-time">·7:30</td>
+                    <td width="80" class="list-name">耶稣新闻</td>
+                    <td align="right" class="list-mins">10min</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+    <div class="card">
+        <a href="list-pic/微信图片_20230610225757.png" download="yebie" class="download-button">下载节目单</a>
+    </div>
+
+
+
+
+    <!---信息-->
+    <div class="card">
+        <p class="information">版权所有©2023 Yebie.Inc. All rights reserved</p>
+    </div>
+    </div>
+</body>
+
+</html>
