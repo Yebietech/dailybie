@@ -97,12 +97,14 @@ h1.big_title {
   text-align: left;
   font-family: Alibaba-heavy;
   font-size: 48px;
+  color: #FFFFFF;
 }
 
 h3.big_title {
   text-align: left;
   font-family: Alibaba-semiblod;
   font-size: 24px;
+  color: #FFFFFF;
 }
 
 button.big_title {
@@ -168,6 +170,12 @@ button.big_title:hover span:after {
     0 6px 20px 0 rgba(0, 0, 0, 0.02);
   padding: 20px;
   margin-top: 20px;
+}
+
+video {
+  border-radius: 14px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.02),
+    0 6px 20px 0 rgba(0, 0, 0, 0.02);
 }
 
 .row:after {
@@ -339,4 +347,20 @@ img {
 
 #hid {
   display: none;
+}
+
+#title-card {
+  background-color: black;
+  background-image: url("yebie-big.png");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: right;
+}
+
+@media screen and (max-width: 522px) {
+  #title-card {
+    background-size: 100% auto;
+    background-position: center;
+  }
+  
 }
